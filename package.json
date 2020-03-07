@@ -1,19 +1,19 @@
 {
-  "name": "the-dump",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "build": "next build",
-    "dev": "next dev",
-    "prettier": "prettier --config ./prettier.config.js --write './**/*.{js,json}'",
-    "start": "next start"
-  },
-  "dependencies": {
-    "next": "9.2.2",
-    "react": "16.13.0",
-    "react-dom": "16.13.0"
-  },
-  "devDependencies": {
-    "prettier": "1.19.1"
-  }
+    "name": "the-dump",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "build": "next build",
+        "dev": "next dev",
+        "prettier": "prettier --config ./prettier.config.js --write './**/*.{js,json}'",
+        "start": "next start"
+    },
+    "dependencies": {
+        "next": "9.2.2",
+        "react": "16.13.0",
+        "react-dom": "16.13.0"
+    },
+    "devDependencies": {
+        "prettier": "1.19.1"
+    }
 }
