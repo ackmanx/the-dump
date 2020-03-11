@@ -20,14 +20,14 @@ const styles = {
         border: 'none',
         outline: 'none',
         padding: 0,
-    }
+    },
 }
 
 export const Login = () => {
     return (
         <div style={styles.loginOverlay}>
             <div style={styles.flexPositioner}>
-                <input placeholder='why?' style={styles.login}/>
+                <input placeholder='why?' style={styles.login} />
             </div>
         </div>
     )
