@@ -1,36 +1,37 @@
 import React from 'react'
+import styled from 'styled-components'
 
-const styles = {
-    loginOverlay: {
-        position: 'absolute',
-        top: 0,
-        bottom: 0,
-        left: 0,
-        right: 0,
-        fontSize: '90px',
-        color: 'black',
-    },
-    flexPositioner: {
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        height: '100vh',
-    },
-    login: {
-        border: 'none',
-        outline: 'none',
-        padding: 0,
-        textAlign: 'center',
-        fontSize: 72,
-    },
-}
+const LoginOverlay$ = styled.div`
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    font-size: 90px;
+    color: black;
+`
+
+const FlexPositioner$ = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+`
+
+const Login$ = styled.input`
+    border: none;
+    outline: none;
+    padding: 0;
+    text-align: center;
+    font-size: 72px;
+`
 
 export const Login = () => {
     return (
-        <div style={styles.loginOverlay}>
-            <div style={styles.flexPositioner}>
-                <input placeholder='why?' style={styles.login} />
-            </div>
-        </div>
+        <LoginOverlay$>
+            <FlexPositioner$>
+                <Login$ placeholder='why?' />
+            </FlexPositioner$>
+        </LoginOverlay$>
     )
 }

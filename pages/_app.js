@@ -1,10 +1,18 @@
-import '../styles.css'
 import React from 'react'
+import { createGlobalStyle } from 'styled-components'
 
-//In order to import a global css file, you have to create this component to override the one Next.js implements
-//For each page you go to, the component for the page is passed here as Component
-//This is the only place you can import global css, and the file cannot reside in the /public folder
+const GlobalStyle = createGlobalStyle`
+  html, body {
+    margin: 0;
+    padding: 0;
+}
+`
 
-export default function MyApp({ Component, pageProps }) {
-    return <Component {...pageProps} />
+export default function MyApp({ Component: Page, pageProps }) {
+    return (
+        <>
+            <GlobalStyle />
+            <Page {...pageProps} />
+        </>
+    )
 }
