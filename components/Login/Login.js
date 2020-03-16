@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from 'react'
+import React, { useCallback } from 'react'
 import styled from 'styled-components'
 import fetch from 'isomorphic-unfetch'
 
@@ -27,7 +27,9 @@ const Login$ = styled.input`
     font-size: 72px;
 `
 
-export const Login = () => {
+export const Login = props => {
+    const { setIsLoggedIn, setUserData } = props
+
     const handleSubmit = useCallback(async event => {
         event.preventDefault()
 
@@ -38,7 +40,10 @@ export const Login = () => {
 
         if (password) return
 
-        const dumps = await fetch(`/api/dumps/${pin}`)
+        const userData = await fetch(`/api/dumps/${pin}`)
+
+        setUserData(await userData.json())
+        setIsLoggedIn(true)
     }, [])
 
     return (
