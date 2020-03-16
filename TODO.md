@@ -1,5 +1,7 @@
 # Feature
 
+## Rename api dumps route to user? Rename collection?
+
 ## Show dumps
 * output ready-only dumps
 * sorted by most recent
