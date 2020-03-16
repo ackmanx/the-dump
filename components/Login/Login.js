@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { useCallback, useState } from 'react'
 import styled from 'styled-components'
+import fetch from 'isomorphic-unfetch'
 
 const LoginOverlay$ = styled.div`
     position: absolute;
@@ -27,10 +28,26 @@ const Login$ = styled.input`
 `
 
 export const Login = () => {
+    const handleSubmit = useCallback(async event => {
+        event.preventDefault()
+
+        const {
+            pin: { value: pin },
+            password: { value: password },
+        } = event.target
+
+        if (password) return
+
+        const dumps = await fetch(`/api/dumps/${pin}`)
+    }, [])
+
     return (
         <LoginOverlay$>
             <FlexPositioner$>
-                <Login$ placeholder='why?' />
+                <form onSubmit={handleSubmit}>
+                    <Login$ name='pin' placeholder='why?' />
+                    <input name='password' id='password' type='hidden' />
+                </form>
             </FlexPositioner$>
         </LoginOverlay$>
     )
