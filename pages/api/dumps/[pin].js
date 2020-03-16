@@ -6,8 +6,8 @@ const router = nextConnect()
 router.use(middleware)
 
 router.get(async (req, res) => {
-    const pin = req.query.pin
-    const dumps = await req.db.collection('dump').findOne({ 'user.pin': Number(pin) })
+    const pin = Number(req.query.pin)
+    const dumps = await req.db.collection('dump').findOne({ 'user.pin': pin })
     res.json(dumps || {})
 })
 
