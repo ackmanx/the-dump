@@ -1,8 +1,5 @@
 # Feature
 
-## Login
-* should fetch for that PIN
-
 ## Show dumps
 * output ready-only dumps
 * sorted by most recent
