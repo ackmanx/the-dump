@@ -14,11 +14,6 @@
 * should allow any text, no formatting
 * code should not run when displayed (react should take care of this automatically)
 
-## Password field
-* add a hidden text field called password
-* if it's populated, then must be a bot and ignore the sign in
-* front-end protect so doesn't hit the server
-
 ## Enhance dumps
 * syntax highlighting
 * link to dumps
