@@ -40,7 +40,7 @@ export const Login = props => {
 
         if (password) return
 
-        const userData = await fetch(`/api/dumps/${pin}`)
+        const userData = await fetch(`/api/app/${pin}`)
 
         setUserData(await userData.json())
         setIsLoggedIn(true)
