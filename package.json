@@ -4,9 +4,9 @@
     "private": true,
     "scripts": {
         "build": "next build",
-        "dev": "next dev -p 3666",
         "prettier": "prettier --config ./prettier.config.js --write './**/*.{js,json}'",
-        "start": "next start"
+        "start": "next start",
+        "start:dev": "next dev -p 3666"
     },
     "dependencies": {
         "isomorphic-unfetch": "^3.0.0",
